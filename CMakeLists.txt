@@ -9,4 +9,4 @@ add_executable(
         aoc22
         include/thirdparty/cli11/cli11.hpp
         main.cpp
-)
+        include/solutions/day01/day01.h)
