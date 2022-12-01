@@ -11,7 +11,6 @@
 #endif //AOC22_DAY01_H
 
 std::string part1(std::string &filename) {
-    std::cout << filename << std::endl;
     std::ifstream infile(filename);
     std::string line;
 
@@ -27,7 +26,6 @@ std::string part1(std::string &filename) {
             sum = 0;
         }
     }
-    std::ostringstream oss;
 
     long part1 = sums.top();
     sums.pop();
@@ -35,6 +33,7 @@ std::string part1(std::string &filename) {
     sums.pop();
     part2 += sums.top();
 
+    std::ostringstream oss;
     oss << "part1: " << part1 << " part2: " << part2;
     return oss.str();
 }
