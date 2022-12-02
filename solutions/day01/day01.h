@@ -5,12 +5,11 @@
 #ifndef AOC22_DAY01_H
 #define AOC22_DAY01_H
 #include <iostream>
-#include <optional>
 #include <queue>
 
 #endif //AOC22_DAY01_H
 
-std::string part1(std::string &filename) {
+std::string day01(std::string &filename) {
     std::ifstream infile(filename);
     std::string line;
 
