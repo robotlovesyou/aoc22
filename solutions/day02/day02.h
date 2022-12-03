@@ -132,7 +132,6 @@ std::string day02(std::string &filename) {
 
     oss << "part1: " << score << " part2: " << score2;
     return oss.str();
-    return "day02";
 }
 
 #endif //AOC22_DAY02_H
