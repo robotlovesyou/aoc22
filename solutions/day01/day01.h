@@ -7,8 +7,6 @@
 #include <iostream>
 #include <queue>
 
-#endif //AOC22_DAY01_H
-
 std::string day01(std::string &filename) {
     std::ifstream infile(filename);
     std::string line;
@@ -36,4 +34,8 @@ std::string day01(std::string &filename) {
     oss << "part1: " << part1 << " part2: " << part2;
     return oss.str();
 }
+
+#endif //AOC22_DAY01_H
+
+
 
