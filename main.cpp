@@ -1,10 +1,10 @@
 #include "cli11/CLI11.hpp"
-#include <iostream>
 #include "solutions/day01/day01.h"
 #include "solutions/day02/day02.h"
 #include "solutions/day03/day03.h"
 #include "solutions/day04/day04.h"
 #include "solutions/day05/day05.h"
+#include "solutions/day06/day06.h"
 
 int main(int argc, char** argv) {
     CLI::App app{"AOC 2022"};
@@ -25,6 +25,9 @@ int main(int argc, char** argv) {
     });
     app.add_subcommand("5", "day 5")->final_callback([&filename](){
         std::cout << day05(filename) << std::endl;
+    });
+    app.add_subcommand("6", "day 6")->final_callback([&filename](){
+        std::cout << day06(filename) << std::endl;
     });
 
     app.require_subcommand(1);

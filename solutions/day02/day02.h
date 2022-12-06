@@ -4,7 +4,9 @@
 
 #ifndef AOC22_DAY02_H
 #define AOC22_DAY02_H
-#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
 
 std::string day02(std::string &filename) {
     const char THEIR_ROCK = 'A';

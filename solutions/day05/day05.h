@@ -5,7 +5,9 @@
 #ifndef AOC22_DAY05_H
 #define AOC22_DAY05_H
 
-#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
 #include <queue>
 
 bool read_stack(std::string &line, int ord, char &entry) {

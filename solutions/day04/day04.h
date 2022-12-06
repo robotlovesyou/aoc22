@@ -5,7 +5,9 @@
 #ifndef AOC22_DAY04_H
 #define AOC22_DAY04_H
 
-#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
 #include <queue>
 
 std::string day04(std::string &filename) {
