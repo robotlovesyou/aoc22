@@ -6,6 +6,7 @@
 #include "solutions/day05/day05.h"
 #include "solutions/day06/day06.h"
 #include "solutions/day07/day07.h"
+#include "solutions/day08/day08.h"
 
 int main(int argc, char** argv) {
     CLI::App app{"AOC 2022"};
@@ -32,6 +33,9 @@ int main(int argc, char** argv) {
     });
     app.add_subcommand("7", "day 7")->final_callback([&filename](){
         std::cout << day07(filename) << std::endl;
+    });
+    app.add_subcommand("8", "day 8")->final_callback([&filename](){
+        std::cout << day08(filename) << std::endl;
     });
 
     app.require_subcommand(1);
