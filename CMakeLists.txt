@@ -9,4 +9,4 @@ add_executable(
         aoc22
         include/thirdparty/cli11/cli11.hpp
         main.cpp
-        solutions/day01/day01.h solutions/day02/day02.h solutions/day03/day03.h solutions/day04/day04.h solutions/day05/day05.h solutions/day06/day06.h solutions/template/template.h solutions/day07/day07.h solutions/day07/day07.cpp solutions/day08/day08.h)
+        solutions/day01/day01.h solutions/day02/day02.h solutions/day03/day03.h solutions/day04/day04.h solutions/day05/day05.h solutions/day06/day06.h solutions/template/template.h solutions/day07/day07.h solutions/day07/day07.cpp solutions/day08/day08.h solutions/day09/Head.cpp solutions/day09/Head.h solutions/day09/Tail.cpp solutions/day09/Tail.h solutions/day09/day09.h solutions/day09/defs.h)
