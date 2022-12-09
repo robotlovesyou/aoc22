@@ -5,18 +5,20 @@
 #ifndef AOC22_HEAD_H
 #define AOC22_HEAD_H
 
+#include <vector>
 #include "defs.h"
 #include "Tail.h"
 
 class Head {
 public:
-    explicit Head(Tail* tail);
+    explicit Head(size_t tail_len);
     void move(char direction, int amount);
-    coord position();
+    size_t tail_visited();
 
 
 private:
-    Tail *_tail;
+    void head_moved();
+    std::vector<Tail> _tail;
     coord _position;
 };
 

@@ -14,16 +14,10 @@
 std::string day09(std::string &filename) {
     std::ifstream infile(filename);
     std::string line;
-    Tail tail(nullptr);
-    Head short_rope(&tail);
-    Tail *next = nullptr;
-    for(int i  = 0; i < 9; i++) {
-        next = new Tail(next);
-    }
-    Head long_rope(next);
+    Head short_rope(1);
+    Head long_rope(9);
 
     while(std::getline(infile, line)) {
-//        std::cout << line << std::endl << "====" << std::endl;
         std::istringstream iss(line);
         char direction;
         int amount;
@@ -33,8 +27,7 @@ std::string day09(std::string &filename) {
     }
 
     std::ostringstream oss;
-    oss << "part1: " << tail.visit_count() << " part2: " << next->visit_count();
-    delete next;
+    oss << "part1: " << short_rope.tail_visited() << " part2: " << long_rope.tail_visited();
     return oss.str();
 }
 #endif //AOC22_DAY09_H

@@ -5,12 +5,15 @@
 #include <stdexcept>
 #include "Head.h"
 
-Head::Head(Tail *tail): _tail(tail) {
+Head::Head(size_t tail_len) {
     _position = coord{0,0};
+    for(size_t i = 0; i < tail_len; i++) {
+        _tail.emplace_back(Tail());
+    }
 }
 
 void Head::move(char direction, int amount) {
-    vec change{0,0};
+    vec change;
     switch(direction) {
         case 'U':
             change = {0,1};
@@ -30,10 +33,21 @@ void Head::move(char direction, int amount) {
     for(int i = 0; i < amount; i++) {
         _position.first += change.first;
         _position.second += change.second;
-        _tail->head_moved(_position);
+        head_moved();
     }
 }
 
-coord Head::position() {
-    return _position;
+void Head::head_moved() {
+    coord current = _position;
+    for(auto &t: _tail) {
+        coord new_p = t.head_moved(current);
+        if (new_p == current) {
+            break;
+        }
+        current = new_p;
+    }
+}
+
+size_t Head::tail_visited() {
+    return _tail[_tail.size()-1].visit_count();
 }
